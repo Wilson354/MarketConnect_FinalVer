@@ -28,5 +28,9 @@ createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
 
 reportWebVitals();

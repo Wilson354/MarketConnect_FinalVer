@@ -1,16 +1,9 @@
 import React from "react";
-//images
-import ImgOne from "../../assets/images/about-us/img-1.jpeg";
-import ImgTwo from "../../assets/images/about-us/img-2.jpeg";
-import ImgThree from "../../assets/images/about-us/img-3.jpeg";
 
 const AboutCustomers = () => {
   return (
     <article className="about-customers">
       <div className="images">
-        <img src={ImgOne} alt="" aria-hidden="true" />
-        <img src={ImgTwo} alt="" aria-hidden="true" />
-        <img src={ImgThree} alt="" aria-hidden="true" />
       </div>
       <section className="content">
         <h2 className="sub-title">Happy Customers</h2>

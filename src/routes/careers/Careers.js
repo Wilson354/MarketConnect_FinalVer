@@ -7,7 +7,7 @@ import careers from "../../data/careers";
 
 const Careers = () => {
     useEffect(() => {
-        document.title = "Careers | Pizza Time";
+        document.title = "MarketConnect";
     }, []);
     return (
         <main className="careers">

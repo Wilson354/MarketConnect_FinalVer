@@ -1,5 +1,4 @@
 import React from "react";
-import OfficeTwo from "../../assets/images/about-us/office-2.jpeg";
 import { Link } from "react-router-dom";
 import ResetLocation from "../../helpers/ResetLocation";
 
@@ -15,7 +14,6 @@ const AboutCareers = () => {
         </p>
         <Link to="/careers" onClick={ResetLocation} className="active-button-style">Join now</Link>
       </section>
-      <img src={OfficeTwo} alt="" aria-hidden="true" />
     </article>
   );
 }

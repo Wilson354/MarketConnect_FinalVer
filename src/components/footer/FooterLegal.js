@@ -58,24 +58,6 @@ export default class FooterLegal extends React.Component {
                         Productos
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink
-                        style={({ isActive }) =>
-                            isActive
-                                ? {
-                                    textDecoration: "none",
-                                    color: "#ff6240",
-                                }
-                                : {}
-                        }
-                        onClick={ResetLocation}
-                        className="txt-white"
-                        to="/terms"
-                    >
-                        Importaciones
-                    </NavLink>
-                </li>
-
             </ul>
         );
     }

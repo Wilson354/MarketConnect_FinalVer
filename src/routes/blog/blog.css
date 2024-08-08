@@ -1,112 +1,273 @@
-.blog {
+/* TopBar */
+.top-bar {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: space-around;
   align-items: center;
-  background-image: url("../../assets/images/landing-bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  justify-content: center;
-}
-.blog h2,
-.blog-intro,
-.blog-grid {
-  font-family: var(--poppins-font);
+  background-color: #333;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.blog h2,
-.blog-grid h3 {
-  color: var(--white);
+.menu-item {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
 }
 
-.blog h2 {
-  font-size: 4rem;
-}
-.blog-intro {
-  color: var(--whitish-gray);
-  font-size: 1.3rem;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-}
-/*** Blog grid ***/
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1440px;
-}
-.blog-grid h3 {
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  font-weight: 400;
+.menu-item a {
+  color: white;
+  text-decoration: none;
 }
 
-/*** Blog grid item ***/
-.blog-grid-item {
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #444;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+/* Carousel */
+.carousel-container {
   width: 100%;
-  max-width: 1400px;
+  height: 70vh;  /* Adjust height to 70% of viewport height */
+  overflow: hidden;
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: 100%;  /* Adjust height to fill the carousel */
+  object-fit: cover;  /* Ensure the image covers the container */
+}
+
+/* Card Section */
+.card-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(20% - 20px);  /* Adjust to fit 5 cards in a row */
+  margin: 10px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background-color: #555;
+}
+
+.image-card-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.image-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.image-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.large-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.small-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.small-images img {
+  width: 32%;
+  height: auto;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.legend-card-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.legend-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+  max-width: 45%;
+}
+
+.legend-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
   text-align: left;
+  margin-right: 20px;
+  color: #ffffff;
 }
 
-.blog-grid-item img {
-  max-width: 100%;
-  height: 10rem;
+.legend-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.legend-content button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.legend-content button:hover {
+  background-color: #ffffff;
+}
+
+.legend-image {
+  width: 250px; /* Ajustar el ancho de la imagen */
+  height: auto;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-.blog-grid-item h3 {
-  transition: all ease-in-out 0.3s;
-}
-.blog-grid-item .credentials {
-  color: var(--whitish-gray);
+.final-banner {
   display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: transparent; /* Fondo transparente */
+  gap: 20px;
 }
 
-.blog-grid-item .intro {
-  color: var(--whitish-gray);
+.banner-part {
+  flex: 1;
+  background-color: transparent; /* Fondo transparente */
+  padding: 20px;
+  text-align: center;
 }
 
-/*** Pagination ***/
-
-.blog .blog-pagination {
-  position: initial;
-  display: flex;
-  flex-direction: row;
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+.banner-part p {
+  font-size: 1.2rem;
+  color: white; /* Texto blanco */
+  margin: 10px 0 0;
+  white-space: pre-line; /* Para mantener los saltos de línea */
 }
 
-/*** Responsive ***/
+.banner-part .fa-icon {
+  color: white; /* Iconos blancos */
+  margin-bottom: 10px;
+}
 
-@media (hover: hover) {
-  .blog-grid-item h3:hover {
-    color: var(--pizza-red);
-    transition: all ease-in-out 0.3s;
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(33.33% - 20px);  /* 3 cards per row for medium screens */
   }
 }
 
-@media screen and (min-width: 700px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);  /* 2 cards per row for small screens */
   }
 }
 
-@media screen and (min-width: 1110px) {
-  .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media screen and (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;  /* 1 card per row for very small screens */
+  }
+}
+
+/* Responsive TopBar */
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+  }
+  .menu-item {
+    padding: 10px;
+  }
+  .dropdown {
+    top: 50px; /* Adjust based on new top-bar height */
+  }
+}
+
+/* Responsive Carousel */
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    height: 50vh;  /* Adjust height for smaller screens */
   }
 }

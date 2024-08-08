@@ -101,11 +101,11 @@ const Register = ({ activateLoginModal }) => {
   const validate = validateForm("registration");
 
   useEffect(() => {
-    document.title = "Registration | Pizza Time";
+    document.title = "Registration | MarketConnect";
   }, []);
   return (
     <main className="register-main">
-      <h2>{submit && Object.keys(formError).length === 0 ? 'Success!' : 'Registration'}</h2>
+      <h2>{submit && Object.keys(formError).length === 0 ? 'Creado con exito' : 'Registro de usuario'}</h2>
       {loading ? <div role="status" className="loader">
         <p>Almost there...</p>
         <img alt="Processing request" src="https://media0.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif?cid=ecf05e472hf2wk1f2jou3s5fcnx1vek6ggnfcvhsjbeh7v5u&ep=v1_stickers_search&rid=giphy.gif&ct=s" />
@@ -128,39 +128,37 @@ const Register = ({ activateLoginModal }) => {
         <form className="registration-form" onSubmit={handleSubmit}>
           {registrationFail ? <p className="registration-input-err">Seems like this email has already been registered!</p> : null}
           <section className="name-section">
-            <input type="text" placeholder="Full name" name="fullname" value={formValue.fullname}
+            <input type="text" placeholder="Nombre completo" name="fullname" value={formValue.fullname}
               onChange={handleValidation} />
             <span className="registration-input-err">{formError.fullname}</span>
           </section>
           <section className="email-section">
-            <input type="text" placeholder="Email" name="email" value={formValue.email}
+            <input type="text" placeholder="Correo" name="email" value={formValue.email}
               onChange={handleValidation} />
             <span className="registration-input-err">{formError.email}</span>
           </section>
           <section className="password-section">
-            <input type="password" placeholder="New password" name="password" value={formValue.password}
+            <input type="password" placeholder="Nueva contraseña" name="password" value={formValue.password}
               onChange={handleValidation} />
             <span className="registration-input-err">{formError.password}</span>
-            <input type="password" placeholder="Repeat password" name="repeatPassword" value={formValue.repeatPassword}
+            <input type="password" placeholder="Repetir contraseña" name="repeatPassword" value={formValue.repeatPassword}
               onChange={handleValidation} />
             <span className="registration-input-err">{formError.repeatPassword}</span>
           </section>
           <section className="birthday">
-            <input type="text" placeholder="Address (optional)" name="address" value={formValue.address}
+            <input type="text" placeholder="Dirección (opcional)" name="address" value={formValue.address}
               onChange={handleValidation} />
             <span className="registration-input-err">{formError.address}</span>
           </section>
           <section className="birthday">
-            <input type="text" placeholder="Number (optional)" name="number" value={formValue.number}
+            <input type="text" placeholder="Telefono (opcional)" name="number" value={formValue.number}
               onChange={handleValidation} />
             <span className="registration-input-err">{formError.number}</span>
           </section>
           <p className="terms-warning">
-            By clicking Sign Up, you agree to our Terms, Data Policy and Cookies
-            Policy. You may receive an email notification from us and can opt
-            out any time.
+            Al registrarse, usted esta de acuerdo con nuestros terminos y condiciones, recibira una notificación para confirmar la cuenta
           </p>
-          <button className="register-btn" type="submit">Sign up</button>
+          <button className="register-btn" type="submit">Registrarse</button>
         </form>
       }
 

@@ -89,7 +89,6 @@
   position: relative;
   padding: 4rem;
   z-index: 98;
-  background-image: url("../../assets/images/about-us/section-one.jpeg");
 }
 .about-us .content h2,
 .about-us .content h3,
@@ -122,9 +121,6 @@
 
 /**** About dedication ***/
 
-.about-dedication {
-  background-image: url("../../assets/images/about-us/section-two.jpeg");
-}
 
 .about-dedication .content {
   position: relative;
@@ -177,7 +173,6 @@
   width: 100%;
   height: 20rem;
   bottom: 0;
-  background-image: url("../../assets/images/about-us/section-three.jpeg");
   background-position: center;
   background-repeat: repeat;
   background-size: cover;

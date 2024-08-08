@@ -10,43 +10,45 @@ import img4 from '../../assets/images/contact-us/0X4A2104.jpg';
 import img5 from '../../assets/images/contact-us/0X4A2105.jpg';
 import img6 from '../../assets/images/contact-us/0X4A2107.jpg';
 import styled from 'styled-components';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import './ContactUsLanding.css'; // Asegúrate de crear este archivo CSS
 
 const products = [
   {
     image: img1,
-    title: 'Producto 1',
-    price: '$100',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed do eiusmod tempor',
+    title: 'Libreta Pop-it Sirena',
+    price: '$91.90',
+    description: 'Libreta ideal para regreso de clases y amantes de sirenas.',
   },
   {
     image: img2,
-    title: 'Producto 2',
-    price: '$150',
-    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Sed do eiusmod tempor,',
+    title: 'Libreta Pop-it auto',
+    price: '$91.90',
+    description: 'Libreta ideal para regreso de clases y amantes de los autos.',
   },
   {
     image: img3,
-    title: 'Producto 3',
-    price: '$200',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    title: 'Libreta Pop-it Helado',
+    price: '$91.90',
+    description: 'Libreta ideal para regreso de clases y amantes de los helados.',
   },
   {
     image: img4,
-    title: 'Producto 4',
-    price: '$120',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    title: 'Libreta Pop-it Unicornio',
+    price: '$91.90',
+    description: 'Libreta ideal para regreso de clases y amantes de los unicornios.',
   },
   {
     image: img5,
-    title: 'Producto 5',
-    price: '$180',
-    description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    title: 'Libreta Pop-it Corazon',
+    price: '$91.90',
+    description: 'Libreta ideal para regreso de clases y que irradia amor.',
   },
   {
     image: img6,
-    title: 'Producto 6',
-    price: '$90',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Libreta Pop-it Cohete',
+    price: '$91.90',
+    description: 'Libreta ideal para regreso de clases y amantes de sirenas',
   },
 ];
 
@@ -138,14 +140,16 @@ const ContactUsLanding = () => {
         <NextButton onClick={() => sliderRef.current.slickNext()}>&#9654;</NextButton>
         <Slider ref={sliderRef} {...settings}>
           {products.map((product, index) => (
-            <div key={index}>
-              <ProductCard 
-                image={product.image}
-                title={product.title}
-                price={product.price}
-                description={product.description}
-              />
-            </div>
+            <CSSTransition key={index} timeout={500} classNames="fade">
+              <div>
+                <ProductCard 
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  description={product.description}
+                />
+              </div>
+            </CSSTransition>
           ))}
         </Slider>
       </SliderContainer>

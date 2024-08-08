@@ -101,7 +101,7 @@ const LoginModal = ({ setLoginModalWindow, setValidLogin, loginModalWindow, hide
           X
         </button>
         <section className="modal-content">
-          <h2>Log in</h2>
+          <h2>Iniciando sesion</h2>
           {loading ?
             <div role="status" className="loader">
               <p>Almost there...</p>
@@ -109,9 +109,9 @@ const LoginModal = ({ setLoginModalWindow, setValidLogin, loginModalWindow, hide
             </div> :
             <form onSubmit={handleLogin}>
               {verificationError.length === 0 ? null : <p className="login-input-err">{verificationError}</p>}
-              <input onChange={handleValidation} value={formValue.email} name="email" type="text" placeholder="Email" />
+              <input onChange={handleValidation} value={formValue.email} name="email" type="text" placeholder="Correo" />
               <span className="login-input-err">{formError.email}</span>
-              <input onChange={handleValidation} value={formValue.password} name="password" type="password" autoComplete="true" placeholder="Password" />
+              <input onChange={handleValidation} value={formValue.password} name="password" type="password" autoComplete="true" placeholder="Contraseña" />
               <span className="login-input-err">{formError.password}</span>
               {submit && Object.keys(formError).length === 0 && !validLogin ?
                 <p className="login-input-err">We couldn't find an account. Try another credentials</p> :
@@ -125,9 +125,9 @@ const LoginModal = ({ setLoginModalWindow, setValidLogin, loginModalWindow, hide
                   to="/register"
                   className="modal-signup-btn"
                 >
-                  Sign up
+                  Registrarse
                 </LinkButton>
-                <button type="submit" className="modal-login-btn">Log in</button>
+                <button type="submit" className="modal-login-btn">Iniciar</button>
               </section>
             </form>
           }

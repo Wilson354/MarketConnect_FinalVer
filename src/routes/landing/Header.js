@@ -3,12 +3,10 @@ import logo from '../../assets/images/logoMC-w.png'
 import openMenu from '../../assets/images/open-menu.svg'
 import closeMenu from '../../assets/images/close-menu.svg'
 import { Link, NavLink } from 'react-router-dom'
-import Cart from '../../assets/images/cart-icon.png'
 import SuccessMsg from '../../components/SuccessMsg'
 import ResetLocation from '../../helpers/ResetLocation'
 
 const Header = ({ loginModal,
-  productsQuantity,
   handleLogout,
   showModal,
   isModalActive,
@@ -112,26 +110,6 @@ const Header = ({ loginModal,
                   : {}
               }
               className="txt-white"
-              to="/about"
-            >
-              Importaciones
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              onClick={() => {
-                ResetLocation()
-                hideMenu()
-              }}
-              style={({ isActive }) =>
-                isActive
-                  ? {
-                    textDecoration: 'none',
-                    color: '#3361FF',
-                  }
-                  : {}
-              }
-              className="txt-white"
               to="/contact"
             >
               Acerca de
@@ -178,21 +156,9 @@ const Header = ({ loginModal,
                     activateLoginModal()
                   }}
                 >
-                  Log in
+                  Inicio de sesion 
                 </div>
               )}
-              <NavLink
-                className="cart-btn active-button-style txt-white"
-                to="/cart"
-                onClick={() => {
-                  ResetLocation()
-                  hideMenu()
-                }}
-              >
-                <img src={Cart} alt="" aria-hidden="true" />
-                <p>Cart</p>
-                <p>({productsQuantity})</p>
-              </NavLink>
             </div>
           </li>
         </ul>

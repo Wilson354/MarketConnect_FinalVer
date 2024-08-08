@@ -3,7 +3,7 @@ import termsContent from "../../data/termsContent";
 
 const Terms = () => {
     useEffect(() => {
-        document.title = "Terms | Pizza Time";
+        document.title = "MarketConnect";
     }, []);
     return (
         <main className="terms">

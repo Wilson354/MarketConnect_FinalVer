@@ -54,6 +54,7 @@ const InfoContainer = styled.div`
   text-align: left;
   overflow: hidden;
   flex: 1;
+  font-family: 'Grotesk', monospace;
 `;
 
 const Title = styled.h2`
@@ -63,6 +64,7 @@ const Title = styled.h2`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: 'Grotesk', monospace;
 
   @media (max-width: 768px) {
     font-size: 1em;
@@ -77,7 +79,7 @@ const Price = styled.p`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
+  font-family: 'Grotesk', monospace;
   @media (max-width: 768px) {
     font-size: 1.2em;
   }
@@ -92,6 +94,7 @@ const Description = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   max-height: 60px; /* Ajustar el tamaño máximo de la descripción */
+    font-family: 'Grotesk', monospace;
 
   @media (max-width: 768px) {
     font-size: 0.8em;

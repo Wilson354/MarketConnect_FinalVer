@@ -1,12 +1,10 @@
 import React from "react";
-import OfficeTwo from "../../assets/images/about-us/office-1.jpeg";
 import { Link } from "react-router-dom";
 import ResetLocation from "../../helpers/ResetLocation";
 
 const AboutCollaboration = () => {
   return (
     <article className="about-collaboration">
-      <img src={OfficeTwo} alt="" aria-hidden="true" />
       <section className="content">
         <h2 className="sub-title">Collaboration</h2>
         <h3>Join the business</h3>

@@ -28,6 +28,11 @@ import Careers from './routes/careers/Careers.js';
 import BlogPost from './routes/blog-post/BlogPost.js';
 import Profile from './routes/profile/Profile.js';
 import ResetLocation from './helpers/ResetLocation.js';
+import ProductDetails from './routes/blog/ProductDetails.js';
+import CardSection from "./routes/blog/CardSection.js";
+import Check from './routes/blog/Checkout.js';
+
+
 
 function App() {
   const [allCategories, setAllCategories] = useState([]);
@@ -42,6 +47,23 @@ function App() {
   const [isModalActive, setIsModalActive] = useState(false);
   const [loginModalWindow, setLoginModalWindow] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
+const [cart, setCart] = useState([]);
+const [totalPrice, setTotalPrice] = useState(0);
+
+const addToCart = (product) => {
+  setCart((prevCart) => {
+    const existingProduct = prevCart.find((item) => item.id === product.id);
+    if (existingProduct) {
+      return prevCart.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    } else {
+      return [...prevCart, { ...product, quantity: 1 }];
+    }
+  });
+};
 
 
   const getUser = async (id) => {
@@ -400,6 +422,7 @@ function App() {
   };
 
   return (
+    
     <BrowserRouter>
       <Header
         loginModal={
@@ -423,6 +446,11 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<RootSection />} />
+        <Route path="/product" element={<ProductDetails cart={cart} setCart={setCart} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />} />
+        <Route path="/product/:id" element={<ProductDetails cart={cart} setCart={setCart} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />} />
+        <Route path="/cards" element={<CardSection />} />
+        <Route path="/checkout" element={<Check cart={cart} totalPrice={totalPrice} />} />
+
 
         <Route
           path="/cart"

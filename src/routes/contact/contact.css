@@ -1,141 +1,185 @@
-.contact {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--light-black);
-  background-image: none;
-  padding-top: 2rem;
-  padding-bottom: 10rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.contact-success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  height: 460px;
-  padding: 2rem;
-}
-.contact-success p {
-  color: var(--green);
-  font-family: var(--poppins-font);
-  font-size: 1.5rem;
-
-  text-align: center;
-}
-.contact-success section {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.contact-loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  height: 460px;
-  padding: 2rem;
-}
-.contact-loader p {
-  font-family: var(--poppins-font);
+/* Header */
+header {
+  width: 100%;
+  background-color: var(--dark-black); /* Fondo negro para el header */
   color: var(--white);
+  position: fixed; /* Fija el header en la parte superior de la pantalla */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  padding: 1rem 2rem; /* Padding para el contenido dentro del header */
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
 }
-.contact-loader img {
-  width: 10rem;
-  height: 10rem;
-  object-fit: cover;
+
+/* Ajustes de espacio para el contenido principal para evitar que el header lo cubra */
+main {
+  padding-top: 5rem; /* Añade espacio en la parte superior para evitar que el contenido se oculte detrás del header */
 }
-.contact form {
-  height: max-content;
-  width: 90%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-}
-.contact form textarea {
-  resize: none;
-}
-.contact form .webflow-style-input {
-  margin: 0;
-}
-.contact-us-img {
-  background-image: url("../../assets/images/img-one.jpeg");
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/images/servicio/Imagen2.jpg");
   background-position: center;
   background-size: cover;
-  height: 15rem;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Previene el desbordamiento del contenido */
+  box-sizing: border-box; /* Incluye padding y border en el ancho y alto del elemento */
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media screen and (max-width: 700px) {
+  .banner {
+    height: 50vh; /* Reduce la altura del banner en pantallas pequeñas */
+    background-size: contain; /* Ajusta el tamaño de la imagen para que se contenga en el área visible */
+  }
+}
+
+/* Company Review Section */
+.company-review {
   width: 100%;
-  border-radius: 10px;
+  padding: 4rem 2rem;
+  background-color: var(--light-black);
+  color: var(--white);
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
 }
 
-/* Contact Content */
-.contact-us-content {
-  background-color: var(--yellow);
-  padding-bottom: 10rem;
+.company-review h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
 }
 
-.contact-us-content-txt {
+.company-review p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
+}
+
+/* Values Section */
+.values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  color: var(--white);
+}
+
+.values-img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Ajusta el tamaño máximo de la imagen */
+  margin-bottom: 2rem;
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
+}
+
+.values-content {
+  width: 100%;
+  text-align: center;
   padding: 2rem;
-  text-align: left;
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
+}
+
+.values-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Providers Section */
+.providers {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 4rem 2rem;
   color: var(--white);
 }
-.contact-us-content-txt h2 {
-  font-size: 4rem;
-  letter-spacing: 1px;
-}
-.contact-us-content-txt h3 {
-  line-height: 2rem;
+
+.providers-content {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
 }
 
-.fullname-error-cpage,
-.input-validation-error,
-.email-error-cpage,
-.textarea-error-cpage {
-  font-family: var(--poppins-font);
-  color: var(--pizza-red);
+.providers-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.button-msg-cpage {
-  font-family: var(--poppins-font);
-  color: var(--white);
-  padding-top: 1rem;
+.providers-img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Ajusta el tamaño máximo de la imagen */
+  margin-bottom: 2rem;
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
 }
 
-.contact .active-button-style,
-.contact .active-button-style:hover {
-  -moz-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
-  -webkit-transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+/* Start Now Section */
+.start-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: var(--light-black);
 }
 
-.contact .active-button-style:hover {
-  border-color: var(--white);
-  background-color: transparent;
+.start-now-button {
+  background-color: #add8e6; /* Azul claro */
+  color: #000; /* Letra negra */
+  border: none;
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/***************  RESPONSIVE ***************/
+.start-now-button:hover {
+  background-color: #87ceeb; /* Un azul un poco más oscuro para el hover */
+}
+
+/* Responsive adjustments */
 @media screen and (min-width: 700px) {
-  .contact form {
-    width: 60%;
+  .company-review h1 {
+    font-size: 4rem;
+  }
+
+  .company-review p {
+    font-size: 1.75rem;
+  }
+
+  .values, .providers {
+    flex-direction: row;
+  }
+
+  .values-content, .providers-content {
+    width: 50%;
+    text-align: left;
+  }
+
+  .values-img, .providers-img {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .values-content h2, .providers-content h2 {
+    font-size: 3rem;
   }
 }
-@media screen and (min-width: 1025px) {
-  .contact-us-img {
-    position: absolute;
-    width: 30%;
-    height: 30%;
-    max-width: 100%;
-    max-height: 100%;
-    transform: translate(85%, 50%);
-    top: 30%;
-    right: 35%;
-    border: 2px solid var(--yellow);
-  }
-  .contact-us-content-txt {
-    width: 30%;
-  }
+
+/* General Styles */
+* {
+  box-sizing: border-box; /* Aplica box-sizing a todos los elementos */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina padding por defecto */
+  font-family: 'Montserrat', sans-serif; /* Establece la fuente Montserrat */
 }

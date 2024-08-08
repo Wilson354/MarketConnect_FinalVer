@@ -143,12 +143,22 @@ header {
   position: -webkit-sticky; /* Safari */
   z-index: 999;
   padding: 2rem;
+  margin-top: 60px; /* Ajusta este valor según la altura de tu header */
+
 }
 .main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Asegura que el header ocupe todo el ancho de la página */
+  background-color: black; /* Fondo negro */
+  position: fixed; /* Hace que el header sea fijo */
+  top: 0; /* Fija el header en la parte superior */
+  left: 0; /* Alinea el header al borde izquierdo */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una ligera sombra para darle definición */
+  
 }
 /* Logo */
 .logo-styling {
@@ -378,16 +388,21 @@ header {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.2rem;
   margin-top: 1.5em;
+  font-family: 'Grotesk', monospace;
+
 }
 
 .subtitle-card h3 {
   margin: 0;
   font-size: 1.5em;
   color: #333;
+  font-family: 'Grotesk', monospace;
+
 }
 
 .large-text {
   font-size: 1.1rem;
+  font-family: 'Grotesk', monospace;
 }
 
 .card {
@@ -398,7 +413,8 @@ header {
   width: auto;
   max-width: 80%;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Grotesk', monospace;
+
 }
 
 @media (max-width: 768px) {
@@ -414,10 +430,14 @@ header {
 
   .txt-white {
     font-size: 2rem;
+    font-family: 'Grotesk', monospace;
+
   }
 
   .subtitle-card h3 {
     font-size: 1.5rem;
+    font-family: 'Grotesk', monospace;
+
   }
 
   .container p {
@@ -428,14 +448,20 @@ header {
 @media (max-width: 480px) {
   .txt-white {
     font-size: 1.5rem;
+
+    font-family: 'Grotesk', monospace;
   }
 
   .subtitle-card h3 {
     font-size: 1.25rem;
+    font-family: 'Grotesk', monospace;
+
   }
 
   .container p {
     font-size: 0.875rem;
+    font-family: 'Grotesk', monospace;
+
   }
 }
 
@@ -454,15 +480,18 @@ header {
   padding: 3rem 1rem;
   max-width: 1440px;
   margin: 0 auto;
+  font-family: 'Grotesk', monospace;
 }
 .section-3-container h2 {
   text-transform: uppercase;
   font-size: 2.5rem;
   font-weight: 400;
+  font-family: 'Grotesk', monospace;
 }
 .section-3-container p {
   color: var(--light-gray);
   max-width: 1200px;
+  font-family: 'Grotesk', monospace;
 }
 
 .services-grid {
@@ -509,6 +538,8 @@ header {
 .services-grid h3 {
   font-size: 1.5rem;
   font-weight: 400;
+  font-family: 'Grotesk', monospace;
+
 }
 /* Section 4 */
 .section-4 {
@@ -896,6 +927,8 @@ header {
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
+  font-family: 'Grotesk', monospace;
+
 }
 
 .section-10 h2 {
@@ -903,9 +936,12 @@ header {
   font-size: 2.5rem;
   font-weight: 400;
   text-align: left;
+  font-family: 'Grotesk', monospace;
 }
 
 .contact-emails {
+  font-family: 'Grotesk', monospace;
+
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -916,16 +952,24 @@ header {
 }
 .contact-emails h3 {
   font-size: 2rem;
+  font-family: 'Grotesk', monospace;
+
 }
 .contact-emails h3,
 .contact-emails h4 {
   color: var(--white);
+  font-family: 'Grotesk', monospace;
+
   font-weight: 500;
 }
 .contact-emails p {
   color: var(--light-gray);
+  font-family: 'Grotesk', monospace;
+
 }
 .contact-emails ul {
+  font-family: 'Grotesk', monospace;
+
   color: var(--light-gray);
   display: flex;
   flex-direction: column;
@@ -963,11 +1007,14 @@ header {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .contact-form h4 {
   margin-bottom: 1rem;
   color: black;
+  font-family: 'Grotesk', monospace;
+
 }
 
 .contact-form .form-group {
@@ -976,6 +1023,8 @@ header {
 
 .contact-form label {
   font-weight: 500;
+  font-family: 'Grotesk', monospace;
+
   color: black;
 }
 

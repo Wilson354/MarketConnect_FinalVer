@@ -27,7 +27,7 @@ const Payment = ({ cartItems, totalPayment }) => {
   }
 
   useEffect(() => {
-    document.title = "Payment | Pizza Time";
+    document.title = "MarketConnect";
   }, []);
   return (
     <React.Fragment>
